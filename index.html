@@ -7,156 +7,223 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #3498db;
-            --secondary-color: #2c3e50;
-            --background-color: #f4f4f4;
-            --text-color: #333;
-            --light-text-color: #f4f4f4;
-        }
-        body {
-            font-family: 'Noto Sans KR', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: var(--text-color);
-            background-color: var(--background-color);
-        }
-        header {
-            background: var(--primary-color);
-            color: var(--light-text-color);
-            text-align: center;
-            padding: 2rem 1rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            font-weight: 700;
-        }
-        header p {
-            margin: 0.5rem 0 0;
-            font-weight: 300;
-        }
-        nav {
-            background: var(--secondary-color);
-            padding: 0.5rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        nav ul li {
-            margin: 0.5rem;
-        }
-        nav ul li a {
-            color: var(--light-text-color);
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            transition: background-color 0.3s ease;
-        }
-        nav ul li a:hover, nav ul li a.active {
-            background-color: var(--primary-color);
-        }
-        main {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 20px;
-        }
-        .article {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            padding: 30px;
-            margin-bottom: 30px;
-            transition: transform 0.3s ease;
-        }
-        .article:hover {
-            transform: translateY(-5px);
-        }
-        .article h2 {
-            color: var(--primary-color);
-            margin-top: 0;
-        }
-        .article img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        .article a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .article a:hover {
-            text-decoration: underline;
-        }
-        .sidebar {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            padding: 20px;
-            position: sticky;
-            top: 80px;
-            height: fit-content;
-        }
-        .ad-placeholder {
-            background: #e0e0e0;
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-            margin: 20px 0;
-            font-style: italic;
-            color: #666;
-        }
-        footer {
-            background: var(--secondary-color);
-            color: var(--light-text-color);
-            text-align: center;
-            padding: 2rem;
-            margin-top: 20px;
-        }
-        .quiz-container {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            padding: 20px;
-            margin-top: 20px;
-        }
-        .quiz-container h3 {
-            color: var(--primary-color);
-        }
-        .quiz-container button {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        .quiz-container button:hover {
-            background-color: #2980b9;
-        }
-        @media (max-width: 768px) {
-            main {
-                grid-template-columns: 1fr;
-            }
-            .sidebar {
-                position: static;
-            }
-        }
+    --primary-color: #4a90e2;
+    --secondary-color: #2c3e50;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --light-text-color: #f8f9fa;
+    --accent-color: #e74c3c;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 3rem 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+header p {
+    margin: 1rem 0 0;
+    font-weight: 300;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+nav {
+    background: var(--secondary-color);
+    padding: 0.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0.5rem;
+}
+
+nav ul li a {
+    color: var(--light-text-color);
+    text-decoration: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.article {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    padding: 40px;
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+}
+
+.article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.article h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+    font-size: 2rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.article a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.article a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.sidebar {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    padding: 30px;
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.ad-placeholder {
+    background: #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0;
+    font-style: italic;
+    color: #666;
+}
+
+footer {
+    background: var(--secondary-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 3rem;
+    margin-top: 40px;
+}
+
+.quiz-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.quiz-container h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.quiz-container button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.quiz-container button:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        position: static;
+        margin-top: 40px;
+    }
+    header h1 {
+        font-size: 2.5rem;
+    }
+    .article {
+        padding: 30px;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 0.3rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+    .article h2 {
+        font-size: 1.5rem;
+    }
+}
     </style>
 </head>
 <body>
