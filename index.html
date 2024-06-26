@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테크 인사이트 - 최신 기술 리뷰 및 비교</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --background-color: #f4f4f4;
+            --text-color: #333;
+            --light-text-color: #f4f4f4;
+        }
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+        header {
+            background: var(--primary-color);
+            color: var(--light-text-color);
+            text-align: center;
+            padding: 2rem 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+            font-weight: 300;
+        }
+        nav {
+            background: var(--secondary-color);
+            padding: 0.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 0.5rem;
+        }
+        nav ul li a {
+            color: var(--light-text-color);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+        nav ul li a:hover, nav ul li a.active {
+            background-color: var(--primary-color);
+        }
+        main {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .article {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        .article:hover {
+            transform: translateY(-5px);
+        }
+        .article h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        .article img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .article a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .article a:hover {
+            text-decoration: underline;
+        }
+        .ad-placeholder {
+            background: #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            font-style: italic;
+            color: #666;
+        }
+        footer {
+            background: var(--secondary-color);
+            color: var(--light-text-color);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            .article {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>테크 인사이트</h1>
+        <p>최신 기술 트렌드와 리뷰의 모든 것</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home" class="active">홈</a></li>
+            <li><a href="#smartphones">스마트폰</a></li>
+            <li><a href="#laptops">노트북</a></li>
+            <li><a href="#tablets">태블릿</a></li>
+            <li><a href="#about">소개</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="ad-placeholder">
+            구글 애드센스 광고 영역
+        </div>
+        <article class="article">
+            <h2>최신 스마트폰 비교: 갤럭시 S24 Ultra vs 아이폰 15 Pro Max</h2>
+            <img src="/api/placeholder/1000/500" alt="갤럭시 S24 Ultra와 아이폰 15 Pro Max 비교 이미지">
+            <p>2024년 상반기, 스마트폰 시장을 주도하는 두 플래그십 모델을 비교해 봤습니다. 삼성의 갤럭시 S24 Ultra와 애플의 아이폰 15 Pro Max, 과연 어떤 차이점이 있을까요?</p>
+            <h3>디자인 및 디스플레이</h3>
+            <p>갤럭시 S24 Ultra는 6.8인치 Dynamic AMOLED 2X 디스플레이를 탑재하여 더욱 선명한 화질을 자랑합니다. 반면 아이폰 15 Pro Max는 6.7인치 Super Retina XDR OLED 디스플레이로 뛰어난 색 재현율을 보여줍니다.</p>
+            <h3>성능</h3>
+            <p>갤럭시 S24 Ultra는 최신 스냅드래곤 칩셋을 탑재하여 뛰어난 성능을 보여주며, 아이폰 15 Pro Max는 A17 Bionic 칩으로 강력한 처리 능력을 자랑합니다.</p>
+            <p><a href="#">상세 리뷰 보기 &rarr;</a></p>
+        </article>
+        <div class="ad-placeholder">
+            구글 애드센스 광고 영역
+        </div>
+        <article class="article">
+            <h2>2024년 베스트 노트북 TOP 5</h2>
+            <img src="/api/placeholder/1000/500" alt="2024년 베스트 노트북 TOP 5 이미지">
+            <p>재택근무와 원격 학습이 일상화된 지금, 좋은 노트북의 중요성은 더욱 커졌습니다. 2024년 상반기 베스트 노트북 5개를 소개합니다.</p>
+            <ol>
+                <li>Dell XPS 13 (2024) - 최고의 종합 성능</li>
+                <li>MacBook Air M3 - 놀라운 배터리 수명</li>
+                <li>Lenovo ThinkPad X1 Carbon Gen 12 - 비즈니스 사용자를 위한 최적의 선택</li>
+                <li>ASUS ROG Zephyrus G14 (2024) - 게이밍에 특화된 고성능</li>
+                <li>HP Spectre x360 14 - 2-in-1 노트북의 결정판</li>
+            </ol>
+            <p><a href="#">각 모델 상세 리뷰 보기 &rarr;</a></p>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2024 테크 인사이트. All rights reserved.</p>
+    </footer>
+    <script>
+        // 네비게이션 활성화 스크립트
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+
+        // 스크롤 시 네비게이션 바 색상 변경
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.backgroundColor = 'rgba(44, 62, 80, 0.9)';
+            } else {
+                nav.style.backgroundColor = 'var(--secondary-color)';
+            }
+        });
+
+        // 페이지 로드 시간 측정
+        window.addEventListener('load', function() {
+            console.log('페이지 로드 시간: ' + (new Date().getTime() - performance.timing.navigationStart) + " ms");
+        });
+    </script>
+</body>
+</html>
