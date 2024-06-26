@@ -7,223 +7,255 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-    --primary-color: #4a90e2;
-    --secondary-color: #2c3e50;
-    --background-color: #f8f9fa;
-    --text-color: #333;
-    --light-text-color: #f8f9fa;
-    --accent-color: #e74c3c;
-}
+            --primary-color: #4a90e2;
+            --secondary-color: #2c3e50;
+            --background-color: #f8f9fa;
+            --text-color: #333;
+            --light-text-color: #f8f9fa;
+            --accent-color: #e74c3c;
+        }
 
-body {
-    font-family: 'Noto Sans KR', sans-serif;
-    line-height: 1.8;
-    margin: 0;
-    padding: 0;
-    color: var(--text-color);
-    background-color: var(--background-color);
-}
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
 
-header {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: var(--light-text-color);
-    text-align: center;
-    padding: 3rem 1rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--light-text-color);
+            text-align: center;
+            padding: 3rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
 
-header h1 {
-    margin: 0;
-    font-size: 3rem;
-    font-weight: 700;
-    letter-spacing: -1px;
-}
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
 
-header p {
-    margin: 1rem 0 0;
-    font-weight: 300;
-    font-size: 1.2rem;
-    opacity: 0.9;
-}
+        header p {
+            margin: 1rem 0 0;
+            font-weight: 300;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
 
-nav {
-    background: var(--secondary-color);
-    padding: 0.5rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
+        nav {
+            background: var(--secondary-color);
+            padding: 0.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
 
-nav ul li {
-    margin: 0.5rem;
-}
+        nav ul li {
+            margin: 0.5rem;
+        }
 
-nav ul li a {
-    color: var(--light-text-color);
-    text-decoration: none;
-    padding: 0.7rem 1.2rem;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-    font-weight: 500;
-}
+        nav ul li a {
+            color: var(--light-text-color);
+            text-decoration: none;
+            padding: 0.7rem 1.2rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
 
-nav ul li a:hover, nav ul li a.active {
-    background-color: var(--primary-color);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
+        nav ul li a:hover, nav ul li a.active {
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
 
-main {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 40px;
-}
+        #search-form {
+            display: flex;
+        }
 
-.article {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-    padding: 40px;
-    margin-bottom: 40px;
-    transition: all 0.3s ease;
-}
+        #search-input {
+            padding: 0.5rem;
+            border: none;
+            border-radius: 20px 0 0 20px;
+        }
 
-.article:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-}
+        #search-form button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0 20px 20px 0;
+            cursor: pointer;
+        }
 
-.article h2 {
-    color: var(--primary-color);
-    margin-top: 0;
-    font-size: 2rem;
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 10px;
-}
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
 
-.article img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
+        .article {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            padding: 40px;
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+        }
 
-.article a {
-    color: var(--accent-color);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
+        .article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
 
-.article a:hover {
-    color: var(--primary-color);
-    text-decoration: underline;
-}
+        .article h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 2rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
 
-.sidebar {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-    padding: 30px;
-    position: sticky;
-    top: 100px;
-    height: fit-content;
-}
+        .article img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
 
-.ad-placeholder {
-    background: #e0e0e0;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    margin: 20px 0;
-    font-style: italic;
-    color: #666;
-}
+        .article a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
 
-footer {
-    background: var(--secondary-color);
-    color: var(--light-text-color);
-    text-align: center;
-    padding: 3rem;
-    margin-top: 40px;
-}
+        .article a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
 
-.quiz-container {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-    padding: 30px;
-    margin-top: 40px;
-}
+        .sidebar {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            padding: 30px;
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
 
-.quiz-container h3 {
-    color: var(--primary-color);
-    font-size: 1.5rem;
-}
+        .ad-placeholder {
+            background: #e0e0e0;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            font-style: italic;
+            color: #666;
+        }
 
-.quiz-container button {
-    background-color: var(--accent-color);
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-    margin-top: 15px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
+        footer {
+            background: var(--secondary-color);
+            color: var(--light-text-color);
+            text-align: center;
+            padding: 3rem;
+            margin-top: 40px;
+        }
 
-.quiz-container button:hover {
-    background-color: var(--primary-color);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
+        .quiz-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-top: 40px;
+        }
 
-@media (max-width: 768px) {
-    main {
-        grid-template-columns: 1fr;
-    }
-    .sidebar {
-        position: static;
-        margin-top: 40px;
-    }
-    header h1 {
-        font-size: 2.5rem;
-    }
-    .article {
-        padding: 30px;
-    }
-    nav ul {
-        flex-direction: column;
-    }
-    nav ul li {
-        margin: 0.3rem 0;
-    }
-}
+        .quiz-container h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
 
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 2rem;
-    }
-    header p {
-        font-size: 1rem;
-    }
-    .article h2 {
-        font-size: 1.5rem;
-    }
-}
+        .quiz-container button {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .quiz-container button:hover {
+            background-color: var(--primary-color);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                position: static;
+                margin-top: 40px;
+            }
+            header h1 {
+                font-size: 2.5rem;
+            }
+            .article {
+                padding: 30px;
+            }
+            nav {
+                flex-direction: column;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 0.3rem 0;
+            }
+            #search-form {
+                margin-top: 1rem;
+                width: 100%;
+            }
+            #search-input {
+                flex-grow: 1;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            .article h2 {
+                font-size: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -241,6 +273,10 @@ footer {
             <li><a href="#news">뉴스</a></li>
             <li><a href="#guides">가이드</a></li>
         </ul>
+        <form id="search-form">
+            <input type="search" id="search-input" placeholder="검색...">
+            <button type="submit">검색</button>
+        </form>
     </nav>
     <main>
         <div class="content">
@@ -253,6 +289,7 @@ footer {
                 <h3>성능</h3>
                 <p>갤럭시 S24 Ultra는 최신 스냅드래곤 칩셋을 탑재하여 뛰어난 성능을 보여주며, 아이폰 15 Pro Max는 A17 Bionic 칩으로 강력한 처리 능력을 자랑합니다.</p>
                 <p><a href="#">상세 리뷰 보기 &rarr;</a></p>
+                <div id="disqus_thread"></div>
             </article>
 
             <article class="article">
@@ -264,6 +301,7 @@ footer {
                 <h3>S펜 vs Apple Pencil</h3>
                 <p>두 태블릿 모두 뛰어난 스타일러스를 지원하지만, 사용감과 기능에서 약간의 차이를 보입니다.</p>
                 <p><a href="#">전체 비교 보기 &rarr;</a></p>
+                <div id="disqus_thread"></div>
             </article>
 
             <article class="article">
@@ -275,11 +313,12 @@ footer {
                 <h3>배터리 수명</h3>
                 <p>갤럭시 워치 6가 더 긴 배터리 수명을 자랑하지만, 애플 워치는 빠른 충전 속도로 이를 상쇄합니다.</p>
                 <p><a href="#">상세 비교 보기 &rarr;</a></p>
+                <div id="disqus_thread"></div>
             </article>
 
             <article class="article">
                 <h2>2024년 최고의 무선 이어버드 TOP 5</h2>
-                <img src="https://images.unsplash.com/photo-1590658007916-431f6d1cfbf6?w=800&auto=format&fit=crop&q=60" alt="2024 최고의 무선 이어버드 TOP 5 이미지">
+                <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&auto=format&fit=crop&q=60" alt="다양한 이어폰 이미지">
                 <p>수많은 무선 이어버드 중 2024년 최고의 제품 5가지를 선정했습니다.</p>
                 <ol>
                     <li>소니 WF-1000XM5: 최고의 노이즈 캔슬링</li>
@@ -289,6 +328,7 @@ footer {
                     <li>Jabra Elite 8 Active: 운동할 때 최적화된 이어버드</li>
                 </ol>
                 <p><a href="#">각 제품 상세 리뷰 보기 &rarr;</a></p>
+                <div id="disqus_thread"></div>
             </article>
 
             <div class="ad-placeholder">
@@ -312,6 +352,7 @@ footer {
                     <li>정품 충전기 사용하기</li>
                 </ol>
                 <p><a href="#">각 팁에 대한 상세 설명 보기 &rarr;</a></p>
+                <div id="disqus_thread"></div>
             </article>
 
             <article class="article">
@@ -323,6 +364,7 @@ footer {
                 <h3>구글, AI 기반 새로운 검색 기능 도입</h3>
                 <p>구글이 인공지능을 활용한 새로운 검색 기능을 선보였습니다. 이 기능은 사용자의 질문에 대해 더욱 정확하고 상세한 답변을 제공할 수 있다고 합니다.</p>
                 <p><a href="#">더 많은 뉴스 보기 &rarr;</a></p>
+                <div id="disqus_thread"></div>
             </article>
 
             <div class="quiz-container">
@@ -393,10 +435,39 @@ footer {
             alert('퀴즈를 시작합니다!\n1. 주로 어떤 용도로 스마트폰을 사용하시나요?\n2. 배터리 수명과 성능 중 어떤 것이 더 중요하신가요?\n3. 카메라 기능을 많이 사용하시나요?\n\n이러한 질문들에 답하시면 적합한 스마트폰을 추천해 드립니다.');
         });
 
+        // 검색 기능
+        document.getElementById('search-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var searchTerm = document.getElementById('search-input').value.toLowerCase();
+            var articles = document.getElementsByClassName('article');
+            for (var i = 0; i < articles.length; i++) {
+                var article = articles[i];
+                var text = article.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    article.style.display = 'block';
+                } else {
+                    article.style.display = 'none';
+                }
+            }
+        });
+
         // 페이지 로드 시간 측정
         window.addEventListener('load', function() {
             console.log('페이지 로드 시간: ' + (new Date().getTime() - performance.timing.navigationStart) + " ms");
         });
+
+        // Disqus 설정
+        var disqus_config = function () {
+            this.page.url = PAGE_URL;  // 현재 페이지 URL로 교체해야 합니다
+            this.page.identifier = PAGE_IDENTIFIER; // 고유한 식별자로 교체해야 합니다
+        };
+        (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://YOUR_SHORTNAME.disqus.com/embed.js'; // YOUR_SHORTNAME을 실제 Disqus shortname으로 교체해야 합니다
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
     </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </body>
 </html>
